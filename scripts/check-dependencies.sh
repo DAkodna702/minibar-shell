@@ -39,7 +39,7 @@ check_command() {
 if [[ "$dotfiles_only" == false ]]; then
     required_commands=(
         qs hyprctl hyprpaper hyprlauncher hyprshutdown
-        wpctl pactl bluetoothctl nmcli docker docker-compose
+        wpctl pactl bluetoothctl rfkill nmcli docker docker-compose
         cliphist wl-paste wl-copy grim slurp satty wf-recorder
         brightnessctl ddcutil jq secret-tool kitty zsh eza bat fastfetch zoxide
         ssh ssh-keygen ss ps lspci hyprfm brave zed opencode codex claude hermes
@@ -87,6 +87,12 @@ if [[ "$dotfiles_only" == false ]]; then
             warn "servicio $service no está habilitado"
         fi
     done
+
+    if compgen -G '/sys/class/bluetooth/hci*' >/dev/null; then
+        ok 'adaptador Bluetooth detectado'
+    else
+        warn 'esta PC no tiene un adaptador Bluetooth; BlueZ sí quedó instalado'
+    fi
 
     if [[ -s "${XDG_CONFIG_HOME:-$HOME/.config}/nvm/nvm.sh" ]]; then
         ok 'NVM'

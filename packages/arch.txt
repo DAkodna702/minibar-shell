@@ -52,6 +52,7 @@ wf-recorder
 jq
 iproute2
 procps-ng
+util-linux
 openssh
 tailscale
 

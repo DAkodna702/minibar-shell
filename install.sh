@@ -266,7 +266,12 @@ deploy_dotfiles() {
 configure_services() {
     log "Habilitando servicios de red, Bluetooth, Docker y Tailscale"
     sudo systemctl enable --now NetworkManager.service
-    sudo systemctl enable --now bluetooth.service
+    sudo systemctl enable bluetooth.service
+    if compgen -G '/sys/class/bluetooth/hci*' >/dev/null; then
+        sudo systemctl start bluetooth.service
+    else
+        printf 'No se detectó un adaptador Bluetooth; BlueZ quedó instalado y habilitado.\n'
+    fi
     sudo systemctl enable --now docker.service
     sudo systemctl enable --now tailscaled.service
 

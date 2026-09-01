@@ -84,6 +84,9 @@ servicios:
 - Los controladores de GPU no se instalan automáticamente porque dependen del
   hardware y, en NVIDIA, también del kernel. La PC debe tener un controlador
   gráfico funcional antes de iniciar Hyprland.
+- Bluetooth, control DDC de monitores, batería y brillo interno son tolerantes
+  a hardware ausente: sus paquetes quedan instalados, pero el verificador solo
+  muestra un aviso y Minibar presenta la función como no disponible.
 - AUR ejecuta PKGBUILDs mantenidos por la comunidad. Revisa las recetas durante
   la confirmación si la política de la empresa lo exige.
 
