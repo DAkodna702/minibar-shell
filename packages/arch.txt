@@ -1,0 +1,95 @@
+# Base y utilidades del instalador
+base-devel
+git
+curl
+rsync
+xdg-user-dirs
+xdg-utils
+
+# Hyprland, Quickshell y sesión Wayland
+hyprland
+hyprpaper
+hyprlauncher
+hyprshutdown
+quickshell
+uwsm
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+polkit-kde-agent
+libnotify
+libsecret
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-pulse
+wireplumber
+alsa-utils
+pavucontrol
+
+# Red, Bluetooth, energía y hardware
+networkmanager
+network-manager-applet
+bluez
+bluez-utils
+blueman
+upower
+brightnessctl
+ddcutil
+usbutils
+pciutils
+
+# Docker y herramientas del Minibar
+docker
+docker-compose
+cliphist
+wl-clipboard
+grim
+slurp
+satty
+wf-recorder
+jq
+iproute2
+procps-ng
+openssh
+tailscale
+
+# Terminal y entorno de desarrollo
+kitty
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+zsh-history-substring-search
+eza
+bat
+fastfetch
+zoxide
+fzf
+ripgrep
+fd
+neovim
+opencode
+
+# Fuentes
+ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-emoji
+
+# Integraciones y vistas previas de HyprFM
+gvfs
+gvfs-mtp
+gvfs-smb
+udisks2
+ffmpeg
+poppler
+perl-image-exiftool
+tar
+gzip
+bzip2
+xz
+zstd
+zip
+unzip
+7zip
+libarchive

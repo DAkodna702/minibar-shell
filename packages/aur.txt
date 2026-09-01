@@ -1,0 +1,5 @@
+# Aplicaciones que no están en los repositorios oficiales de Arch.
+brave-bin
+hyprfm-git
+quickshell-overview-git
+
